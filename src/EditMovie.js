@@ -29,7 +29,7 @@ function EditMovie() {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/movies/${id}`)
+    fetch(`${process.env.REACT_APP_URL}/movies/${id}`)
       .then((data) => data.json())
       .then((mv) => setMovie(mv));
   }, []);
