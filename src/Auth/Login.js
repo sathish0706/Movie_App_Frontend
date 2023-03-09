@@ -22,7 +22,7 @@ const Login = ({ setLoginUser }) => {
 
         if (response.data.message === "Succesful login...") {
           setLoginUser(response.data);
-          navigate("/");
+          navigate("/home");
         } else {
           alert("incorrect email or password");
         }
