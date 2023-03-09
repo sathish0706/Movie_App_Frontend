@@ -53,7 +53,7 @@ function EditMovieForm({ movie }) {
       validationSchema: formValidationSchema,
       onSubmit: async (values) => {
         console.log(values);
-        fetch(`${process.env.REACT_APP_URL}/movies${id}`, {
+        fetch(`${process.env.REACT_APP_URL}/movies/${id}`, {
           method: "PUT",
           body: JSON.stringify(values),
           headers: {
